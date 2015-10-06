@@ -1,4 +1,3 @@
-
 <nav id="menu">        
     <div class="element_menu">
         <h3>Titre menu</h3>
