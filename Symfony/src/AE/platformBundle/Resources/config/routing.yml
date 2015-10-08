@@ -1,0 +1,7 @@
+a_eplatform_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AEplatformBundle:Default:index }
+
+hello_the_world:
+    path:    /hello-world
+    defaults: {_controller: AEplatformBundle:Advert:index }
