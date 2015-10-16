@@ -2,14 +2,20 @@
 // src/AE/platformBundle/Controller/AdvertController.php
 
 namespace AE\platformBundle\Controller;
-use Symfony\Component\HttpFoundation\Response;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class AdvertController
+class AdvertController extends Controller
 {
-    public function indexAction()
+    public function homepageAction()
     {
-        return new Response("Hello World !");
+        return $this->render('AEplatformBundle:Advert:homepage.html.twig');
+    }
+
+    public function contactAction()
+    {
+        return $this->render('AEplatformBundle:Advert:pagecontact');
     }
 }
 
