@@ -10,12 +10,17 @@ class AdvertController extends Controller
 {
     public function homepageAction()
     {
-        return $this->render('AEplatformBundle:Advert:homepage.html.twig');
+        return $this->render('AEplatformBundle:Advert:homepage.php.twig');
     }
 
     public function contactAction()
     {
-        return $this->render('AEplatformBundle:Advert:pagecontact');
+        return $this->render('AEplatformBundle:Advert:pagecontact.php.twig');
+    }
+
+    public function faqAction()
+    {
+        return $this->render('AEplatformBundle:Advert:faq.php.twig');
     }
 }
 

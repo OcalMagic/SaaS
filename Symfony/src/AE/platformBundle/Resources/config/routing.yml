@@ -7,5 +7,9 @@ page_d_accueil:
     defaults: {_controller: AEplatformBundle:Advert:homepage }
 
 page_contact:
-    path:   /pagecontact
+    path:   /contact
     defaults: {_controller: AEplatformBundle:Advert:contact}
+
+page_faq:
+    path:   /faq
+    defaults: {_controller: AEplatformBundle:Advert:faq}
