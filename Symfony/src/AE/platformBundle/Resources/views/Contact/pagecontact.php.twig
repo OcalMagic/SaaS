@@ -24,7 +24,7 @@
 		<!--[if lt IE 9] >
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		< [endif]-->
 		
 	</head>
 
@@ -73,51 +73,55 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p>Une Question ?</br>Laissez nous un message</p>
-               	<form name="sentMessage" id="contactForm" novalidate>
-               	
-               		<div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                        	<p class=""> Civilité</p>
-                            <input type="radio" name="civilité" id="monsieur">
-                            <label for="monsieur">Monsieur</label>
-                            <input type="radio" name="civilité" id="madame">
-                            <label for="madame">Madame</label>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
+               	<form action="{{ path('page_contact') }}" method="POST" name="Contact" id="Contact" novalidate>
+
+                    {#}{ form_widget(form) }}
+                    {{ form_errors(form) }}
+                    {{ form_rest(form) }#}
+                    
+                    <!-- div class="row control-group">
+                     <div class="form-group col-xs-12 floating-label-form-group controls">
+                         <p class=""> Civilité</p>
+                         <input type="radio" name="sendMessage[civilité]" id="sendMessage_monsieur">
+                         <label for="monsieur">Monsieur</label>
+                         <input type="radio" name="sendMessage[civilité]" id="sendMessage_madame">
+                         <label for="madame">Madame</label>
+                         <p class="help-block text-danger"></p>
+                     </div>
+                 </div -->
 
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Nom</label>
-                            <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Merci de renseignez votre nom.">
+                            <input type="text" class="form-control" placeholder="Nom" name="form[name]" id="form_name" required data-validation-required-message="Merci de renseignez votre nom." >
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Société</label>
-                            <input type="text" class="form-control" placeholder="Société" id="society" required data-validation-required-message="Merci de renseignez le nom de votre société.">
+                            <input type="text" class="form-control" placeholder="Société" name="sendMessage[society] "id="sendMessage_society" required data-validation-required-message="Merci de renseignez le nom de votre société.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="E-mail" id="email" required data-validation-required-message="Merci de renseignez voter adresse e-mail.">
+                            <input type="email" class="form-control" placeholder="E-mail" name="sendMessage[email]" id="sendMessage_email" required data-validation-required-message="Merci de renseignez voter adresse e-mail.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Téléphone</label>
-                            <input type="tel" class="form-control" placeholder="Numéro de téléphone" id="phone" required data-validation-required-message="Merci de renseignez votre numéro de téléphone.">
+                            <input type="tel" class="form-control" placeholder="Numéro de téléphone" name="sendMessage[phone]" id="sendMessage_phone" required data-validation-required-message="Merci de renseignez votre numéro de téléphone.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Message</label>
-                            <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Merci de mettre un message."></textarea>
+                            <textarea rows="5" class="form-control" placeholder="Message" name="sendMessage[message]" id="sendMessage_message" required data-validation-required-message="Merci de mettre un message."></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
