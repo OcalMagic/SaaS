@@ -35,4 +35,25 @@ class User extends BaseUser
         parent::__construct();
         // your own logic
     }
+
+    public function setNom($nom){
+
+        $this->nom = $nom;
+    }
+
+    public function getNom(){
+
+        return $this->nom;
+    }
+
+    public function setPrenom($prenom){
+
+        $this->nom = $prenom;
+    }
+
+    public function getPrenom(){
+
+        return $this->prenom;
+    }
+
 }
