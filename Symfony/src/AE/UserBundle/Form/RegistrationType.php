@@ -1,6 +1,6 @@
 <?php
 
-namespace AE\UserBundle\Form
+namespace AE\UserBundle\Form;
 
 class RegistrationType
 {
