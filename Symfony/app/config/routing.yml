@@ -7,6 +7,10 @@ a_eplatform:
     resource: "@AEplatformBundle/Resources/config/routing.yml"
     prefix:   /
 
+a_euser:
+    resource: "@AEUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
