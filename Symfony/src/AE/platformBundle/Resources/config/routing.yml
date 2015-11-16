@@ -13,3 +13,4 @@ page_contact:
 page_faq:
     path:   /faq
     defaults: {_controller: AEplatformBundle:Advert:faq}
+
