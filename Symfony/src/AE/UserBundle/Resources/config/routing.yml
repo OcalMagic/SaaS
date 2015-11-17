@@ -1,3 +1,0 @@
-page_connexion:
-    path:    /connect
-    defaults: {_controller: AEUserBundle:Entity:user }
