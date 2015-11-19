@@ -43,8 +43,8 @@ EOT
         $username   = $input->getArgument('username');
         $email      = $input->getArgument('email');
         $password   = $input->getArgument('password');
-        $nom  = $input->getArgument('nom');
-        $prenom   = $input->getArgument('prenom');
+        $nom        = $input->getArgument('nom');
+        $prenom     = $input->getArgument('prenom');
         $inactive   = $input->getOption('inactive');
         $superadmin = $input->getOption('super-admin');
 

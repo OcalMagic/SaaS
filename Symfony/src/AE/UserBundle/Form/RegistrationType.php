@@ -2,7 +2,27 @@
 
 namespace AE\UserBundle\Form;
 
-class RegistrationType
-{
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+
+class RegistrationType extends AbstractType {
+
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('nom', 'text')
+            ->add('prenom', 'text')
+        ;
+    }
+
+    public function getParent()
+    {
+        return 'fos_user_registration';
+    }
+
+    public function getName()
+    {
+        return 'ae_user_registration';
+    }
 
 }

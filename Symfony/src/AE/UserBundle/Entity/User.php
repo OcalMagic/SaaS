@@ -6,7 +6,7 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity()
  * @ORM\Table(name="ae_user")
  */
 class User extends BaseUser
@@ -18,13 +18,13 @@ class User extends BaseUser
      */
     protected $id;
 
-    /*
+    /**
      * @ORM\Column(type="string", length=255)
      */
 
     private $nom;
 
-    /*
+    /**
     * @ORM\Column(type="string", length=255)
     */
 
@@ -36,24 +36,51 @@ class User extends BaseUser
         // your own logic
     }
 
-    public function setNom($nom){
-
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return User
+     */
+    public function setNom($nom)
+    {
         $this->nom = $nom;
     }
 
-    public function getNom(){
-
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
         return $this->nom;
     }
 
-    public function setPrenom($prenom){
-
-        $this->nom = $prenom;
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     *
+     * @return User
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
     }
 
-    public function getPrenom(){
-
+    /**
+     * Get prenom
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
         return $this->prenom;
     }
+
+
+
 
 }

@@ -26,7 +26,7 @@
     {% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' control-label')|trim}) %}
     {{ parent() }}
     {% if required %}
-        <span class="required" title="This field is required">*</span>
+        <!-- span class="required" title="This field is required">*</--span--!>
     {% endif %}
 {% endblock form_label %}
 
