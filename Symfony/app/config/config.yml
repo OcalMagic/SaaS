@@ -15,8 +15,8 @@ framework:
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
         strict_requirements: ~
-    form:            ~
-    csrf_protection: ~
+    form:            true
+    csrf_protection: true
     validation:      { enable_annotations: true }
     #serializer:      { enable_annotations: true }
     templating:
@@ -59,7 +59,7 @@ doctrine:
         user:     "%database_user%"
         password: "%database_password%"
         charset:  UTF8
-        server_version: 5.6
+        server_version: 5.6.1
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
@@ -84,3 +84,8 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: AE\UserBundle\Entity\User
+    registration:
+        form:
+            type: ae_user_registration
+        confirmation:
+            enabled: true

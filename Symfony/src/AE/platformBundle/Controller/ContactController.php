@@ -3,28 +3,31 @@
 
 namespace AE\platformBundle\Controller;
 
+use AE\platformBundle\Entity\Contact;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use AE\platformBundle\Form\Type\ContactType;
 use AE\platformBundle\Form\Handler\ContactHandler;
+use Symfony\Component\HttpFoundation\Request;
 
 
 class ContactController extends Controller
 {
-    public function contactAction()
+    public function contactAction(Request $request)
     {
-        $form = $this->get('form.factory')->create(new ContactType());
 
-        $request = $this->get('request');
+        $contact = new Contact();
 
-        $formHandler = new ContactHandler($form, $request, $this->get('mailer'));
-
-        $process = $formHandler->process();
+        $form = $this->createForm(new ContactType(), $contact);
 
 
-        if ($process)
-        {
-            $this->get('session')->setFlash('notice', 'Merci de nous avoir contacté, nous répondrons à vos questions dans les plus brefs délais.');
+        //$nom = $form->get('nom')->getData();
+
+
+        if ($form->handleRequest($request)->isValid()) {
+
+                return $this->redirectToRoute('page_d_accueil');
         }
+
 
         return $this->render('AEplatformBundle:Contact:pagecontact.php.twig',
                     array(
