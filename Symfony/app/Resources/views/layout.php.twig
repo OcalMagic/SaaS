@@ -50,8 +50,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ path('page_d_accueil') }}">Accueil</a></li>
-                    <li><a href="#">Pour Qui ?</a></li>
-                    <li><a href="#">Bénéfices</a></li>
+                    <li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a></li>
+                    <li><a href="{{ path('fos_user_profile_edit') }}">Modifier mon profil</a></li>
                     <li><a href="#">Web/Mobile</a></li>
                     <li><a href="{{ path('fos_user_registration_register') }}">Connexion/Inscription</a></li>
                 </ul>
@@ -72,7 +72,7 @@
                     <hr class="small-1">
                     <ul class="list-inline text-center">
                         <li>
-                            <a href="{{ path('page_contact') }}" class="footer-font">Nous écrire</a>
+                            <a href="{{ path('mremi_contact_form') }}" class="footer-font">Nous écrire</a>
                         </li>
                         <li>
                             <a href="{{ path('page_faq') }}" class="footer-font">FAQ</a>
