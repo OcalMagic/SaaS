@@ -45,6 +45,8 @@ EOT
         $password   = $input->getArgument('password');
         $nom        = $input->getArgument('nom');
         $prenom     = $input->getArgument('prenom');
+        $siretId    = $input->getArgument('siretId');
+        $nafId      = $input->getArgument('nafId');
         $inactive   = $input->getOption('inactive');
         $superadmin = $input->getOption('super-admin');
 
@@ -60,6 +62,8 @@ EOT
         $user->setSuperAdmin((Boolean) $superadmin);
         $user->setNom($nom);
         $user->setPrenom($prenom);
+        $user->setNafId($nafId);
+        $user->setSiretId($siretId);
 
         $user_manager->updateUser($user);
 

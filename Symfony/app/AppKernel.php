@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new AE\platformBundle\AEplatformBundle(),
 	        new FOS\UserBundle\FOSUserBundle(),
             new AE\UserBundle\AEUserBundle(),
+            new Mremi\ContactBundle\MremiContactBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

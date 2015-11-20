@@ -84,8 +84,28 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: AE\UserBundle\Entity\User
+    profile:
+        form:
+            type: ae_user_profile
     registration:
         form:
             type: ae_user_registration
         confirmation:
             enabled: true
+
+mremi_contact:
+    store_data:            false
+    contact_class:         Mremi\ContactBundle\Model\Contact
+
+    form:
+        type:              mremi_contact
+        name:              contact_form
+        validation_groups: [Default]
+        subject_provider:  mremi_contact.subject_provider.noop
+
+    email:
+        mailer:            mremi_contact.mailer.twig_swift
+        from:              []
+        to:
+            - { address: testpst4a@gmail.com, name: "Webmaster" }
+        template:          MremiContactBundle:Contact:email.txt.twig
