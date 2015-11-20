@@ -18,6 +18,8 @@
 {% endblock %}
 
 {%  block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bootstrap/js/clean-blog.min.js') }}"></script>
     {% block aeplatform_script %}
     {% endblock %}
 {% endblock %}
