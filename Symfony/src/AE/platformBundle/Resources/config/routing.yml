@@ -8,11 +8,5 @@ page_d_accueil:
 
 page_faq:
     path:   /faq
-<<<<<<< HEAD
     defaults: {_controller: AEplatformBundle:Advert:faq}
-=======
     defaults: {_controller: AEplatformBundle:Advert:faq}
-
-
-
->>>>>>> 886e0ee97acc4d643f97bb0b5f7bc8bc8ecbd63a
