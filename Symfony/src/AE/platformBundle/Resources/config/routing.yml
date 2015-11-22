@@ -10,5 +10,7 @@ page_faq:
     path:   /faq
     defaults: {_controller: AEplatformBundle:Advert:faq}
 
-
+dashboard_user:
+    path:   /dashboard
+    defaults: {_controller: AEplatformBundle:Dashboard:dashboard}
 

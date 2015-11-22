@@ -2,15 +2,12 @@
 
 namespace AE\UserBundle\Controller;
 
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use FOS\UserBundle\Controller\SecurityController as BaseController;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
 
-class UserController
+
+class UserController extends Controller
 {
-
-
 
 }

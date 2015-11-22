@@ -1,4 +1,4 @@
-{% extends "AEplatformBundle::layout.php.twig" %}
+{% extends "AEplatformBundle::layout_dashboard.php.twig" %}
 
 {% block title %}
 	Homepage
@@ -12,7 +12,6 @@
 			<li data-target="#myCarousel" data-slide-to="1"></li>
 			<li data-target="#myCarousel" data-slide-to="2"></li>
 		</ol>
-
 
 		<!-- Slide du Carroussel -->
 		<div class="carousel-inner">
@@ -51,31 +50,15 @@
 	<div id="container">
 		<div class="raw">
 			<div id="titre" class="col-lg-12">
-				<h1>Site Saas PST</h1>
+				<h1>Accueil</h1>
 				<p>
 					Bienvenue sur le site !</br>
 				</p>
+
 				<p>
-					Bienvenue sur le site !</br>
+					{{ knp_menu_render('AEplatformBundle:MenuDashboard:mainMenu') }}</br>
 				</p>
-				<p>
-					Bienvenue sur le site !</br>
-				</p>
-				<p>
-					Bienvenue sur le site !</br>
-				</p>
-				<p>
-					Bienvenue sur le site !</br>
-				</p>
-				<p>
-					Bienvenue sur le site !</br>
-				</p>
-				<p>
-					Bienvenue sur le site !</br>
-				</p>
-				<p>
-					Bienvenue sur le site !</br>
-				</p>
+
 			</div>
 		</div>
 	</div>
