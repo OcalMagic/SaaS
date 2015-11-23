@@ -1,0 +1,70 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Florence
+ * Date: 23/11/2015
+ * Time: 21:29
+ */
+
+namespace AE\UserBundle\Entity;
+
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="ae_entreprise")
+ */
+class Entreprise extends BaseUser
+{
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+
+    private $nomPatron;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+
+    private $nomEntreprise;
+
+    /**
+     * @ORM\Column(type="integer", length=14)
+     *
+     * @Assert\NotBlank(message="Le numéro d'identification (SIREN/SIRET) doit comporter 9 ou 14 chiffres.")
+     * @Assert\Length(
+     *     min=9,
+     *     max=14,
+     *     minMessage="Le numéro doit comporter au moins 9 chiffres.",
+     *     maxMessage="Le numéro ne doit pas comporter plus de 14 chiffres."
+     *     )
+     */
+
+
+    private $siretId;
+
+    /**
+     * @ORM\Column(type="string", length=5)
+     *
+     * @Assert\NotBlank(message="Le code APE de la NAF doit comporter 4 chiffres et une lettre.")
+     * @Assert\Length(
+     *     min=5,
+     *     max=5,
+     *     exactMessage="Le code APE de la NAF doit comporter 4 chiffres et une lettre."
+     *     )
+     */
+
+    private $nafId;
+
+
+}
