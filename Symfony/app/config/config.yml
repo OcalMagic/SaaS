@@ -84,6 +84,9 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: AE\UserBundle\Entity\User
+    profile:
+        form:
+            type: ae_user_profile
     registration:
         form:
             type: ae_user_registration
@@ -106,3 +109,12 @@ mremi_contact:
         to:
             - { address: testpst4a@gmail.com, name: "Webmaster" }
         template:          MremiContactBundle:Contact:email.txt.twig
+
+knp_menu:
+    # use "twig: false" to disable the Twig extension and the TwigRenderer
+    twig:
+        template: knp_menu.html.twig
+    #  if true, enables the helper for PHP templates
+    templating: false
+    # the renderer to use, list is also available by default
+    default_renderer: twig
