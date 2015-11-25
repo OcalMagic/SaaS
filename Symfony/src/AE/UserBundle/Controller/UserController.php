@@ -2,12 +2,12 @@
 
 namespace AE\UserBundle\Controller;
 
+use AE\UserBundle\Entity\User;
 use AE\UserBundle\Entity\Entreprise;
 use AE\UserBundle\Form\EntrepriseType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-
-
+use Symfony\Component\Validator\Constraints\DateTime;
 
 
 class UserController extends Controller
@@ -15,6 +15,7 @@ class UserController extends Controller
 
     public function newEntrepriseAction(Request $request)
     {
+
         $entreprise = new Entreprise();
 
         $form = $this->createForm(new EntrepriseType(), $entreprise);

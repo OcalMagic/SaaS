@@ -35,6 +35,66 @@ class Entreprise
      * @ORM\Column(type="string", length=255)
      */
 
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="string")
+     * @Assert\Email()
+     */
+
+    private $email;
+
+    /**
+     * @ORM\Column(type="integer", length=50)
+     */
+
+    private $telephone;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="integer", length=10)
+     */
+
+    private $codePostal;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+
+    private $ville;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+
+    private $pays;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+
+    private $villeRCS;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+
+    private $chiffreDAffaire;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+
     private $nomEntreprise;
 
     /**
@@ -65,7 +125,35 @@ class Entreprise
 
     private $nafId;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
 
+    private $activite;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+
+    private $secteurDActivite;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+
+    private $declaration;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+
+    private $accre;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+
+    private $startDate;
 
     /**
      * Set nom
@@ -157,5 +245,337 @@ class Entreprise
     public function getNafId()
     {
         return $this->nafId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set activite
+     *
+     * @param string $activite
+     * @return Entreprise
+     */
+    public function setActivite($activite)
+    {
+        $this->activite = $activite;
+
+        return $this;
+    }
+
+    /**
+     * Get activite
+     *
+     * @return string 
+     */
+    public function getActivite()
+    {
+        return $this->activite;
+    }
+
+    /**
+     * Set secteurDActivite
+     *
+     * @param string $secteurDActivite
+     * @return Entreprise
+     */
+    public function setSecteurDActivite($secteurDActivite)
+    {
+        $this->secteurDActivite = $secteurDActivite;
+
+        return $this;
+    }
+
+    /**
+     * Get secteurDActivite
+     *
+     * @return string 
+     */
+    public function getSecteurDActivite()
+    {
+        return $this->secteurDActivite;
+    }
+
+    /**
+     * Set declaration
+     *
+     * @param string $declaration
+     * @return Entreprise
+     */
+    public function setDeclaration($declaration)
+    {
+        $this->declaration = $declaration;
+
+        return $this;
+    }
+
+    /**
+     * Get declaration
+     *
+     * @return string 
+     */
+    public function getDeclaration()
+    {
+        return $this->declaration;
+    }
+
+    /**
+     * Set accre
+     *
+     * @param string $accre
+     * @return Entreprise
+     */
+    public function setAccre($accre)
+    {
+        $this->accre = $accre;
+
+        return $this;
+    }
+
+    /**
+     * Get accre
+     *
+     * @return string 
+     */
+    public function getAccre()
+    {
+        return $this->accre;
+    }
+
+    /**
+     * Set startDate
+     *
+     * @param \DateTime $startDate
+     * @return Entreprise
+     */
+    public function setStartDate(\DateTime $startDate)
+    {
+        $this->startDate = $startDate;
+
+        return $this;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return \DateTime 
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     * @return Entreprise
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string 
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Entreprise
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set telephone
+     *
+     * @param integer $telephone
+     * @return Entreprise
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Get telephone
+     *
+     * @return integer 
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     * @return Entreprise
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string 
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set codePostal
+     *
+     * @param integer $codePostal
+     * @return Entreprise
+     */
+    public function setCodePostal($codePostal)
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    /**
+     * Get codePostal
+     *
+     * @return integer 
+     */
+    public function getCodePostal()
+    {
+        return $this->codePostal;
+    }
+
+    /**
+     * Set ville
+     *
+     * @param string $ville
+     * @return Entreprise
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return string 
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * Set pays
+     *
+     * @param string $pays
+     * @return Entreprise
+     */
+    public function setPays($pays)
+    {
+        $this->pays = $pays;
+
+        return $this;
+    }
+
+    /**
+     * Get pays
+     *
+     * @return string 
+     */
+    public function getPays()
+    {
+        return $this->pays;
+    }
+
+    /**
+     * Set villeRCS
+     *
+     * @param string $villeRCS
+     * @return Entreprise
+     */
+    public function setVilleRCS($villeRCS)
+    {
+        $this->villeRCS = $villeRCS;
+
+        return $this;
+    }
+
+    /**
+     * Get villeRCS
+     *
+     * @return string 
+     */
+    public function getVilleRCS()
+    {
+        return $this->villeRCS;
+    }
+
+    /**
+     * Set chiffreDAffaire
+     *
+     * @param float $chiffreDAffaire
+     * @return Entreprise
+     */
+    public function setChiffreDAffaire($chiffreDAffaire)
+    {
+        $this->chiffreDAffaire = $chiffreDAffaire;
+
+        return $this;
+    }
+
+    /**
+     * Get chiffreDAffaire
+     *
+     * @return float 
+     */
+    public function getChiffreDAffaire()
+    {
+        return $this->chiffreDAffaire;
     }
 }
