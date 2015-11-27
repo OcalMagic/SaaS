@@ -30,8 +30,6 @@
 </head>
 
 <body>
-{% block navbar %}
-
     <!-- Barre de navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
@@ -49,24 +47,25 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><form>
+                            <input name="q" placeholder="Go to a Website">
+                            <input type="submit" value="Search">
+                        </form>
+                    </li>
                     <li><a href="{{ path('page_d_accueil') }}">Accueil</a></li>
                     <li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a></li>
-                    <li><a href="{{ path('fos_user_profile_edit') }}">Modifier mon profil</a></li>
+                    <li><a href="{{ path('entreprise_user') }}">Mon entreprise</a></li>
                     <li><a href="#">Web/Mobile</a></li>
-                    <li><a href="{{ path('fos_user_registration_register') }}">Inscription</a></li>
-                    <li><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>
+                    <li><a href="{{ path('fos_user_registration_register') }}">Connexion/Inscription</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-{% endblock navbar %}
-
     {% block header %}
     {% endblock %}
     {% block body %}
     {% endblock %}
 
-{% block footer %}
     <!-- Le pied de page -->
     <footer>
         <div class="container">
@@ -92,7 +91,6 @@
             </div>
         </div>
     </footer>
-{% endblock footer %}
 
     <!-- Script JavaScript -->
     <script src="{{ asset('bootstrap/js/jquery.js') }}"></script>

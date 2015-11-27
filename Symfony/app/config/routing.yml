@@ -1,7 +1,7 @@
 ae_user:
-    resource: "@AEUserBundle/Controller/"
-    type:     annotation
-    prefix:   /
+    resource: "@AEUserBundle/Resources/config/routing.yml"
+    #type:     annotation
+    #prefix:   /
 
 a_eplatform:
     resource: "@AEplatformBundle/Resources/config/routing.yml"
