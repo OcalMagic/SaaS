@@ -6,7 +6,7 @@
  * Time: 21:29
  */
 
-namespace AE\UserBundle\Entity;
+namespace AE\platformBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;

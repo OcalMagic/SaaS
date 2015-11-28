@@ -6,7 +6,7 @@
  * Time: 21:48
  */
 
-namespace AE\UserBundle\Form;
+namespace AE\platformBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -74,7 +74,7 @@ class EntrepriseType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AE\UserBundle\Entity\Entreprise',
+            'data_class' => 'AE\platformBundle\Entity\Entreprise',
         ));
     }
 

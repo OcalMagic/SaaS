@@ -1,23 +1,17 @@
 <?php
-// src/AE/platformBundle/Controller/AdvertController.php
 
 namespace AE\platformBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use AE\UserBundle\Entity\User;
+use AE\platformBundle\Entity\Entreprise;
+use AE\platformBundle\Form\EntrepriseType;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints\DateTime;
 
-class AdvertController extends Controller
+class EntrepriseController extends Controller
 {
-    public function homepageAction()
-    {
-        return $this->render('AEplatformBundle:Advert:homepage.php.twig');
-    }
-
-    public function faqAction()
-    {
-        return $this->render('AEplatformBundle:Advert:faq.php.twig');
-    }
-
     public function newEntrepriseAction(Request $request)
     {
 
@@ -38,10 +32,8 @@ class AdvertController extends Controller
         }
 
 
-        return $this->render('AEUserBundle:Entreprise:entreprise.html.twig', array(
+        return $this->render('AEplatformBundle:Entreprise:entreprise.html.twig', array(
             'form' => $form->createView(),
         ));
     }
 }
-
-?>

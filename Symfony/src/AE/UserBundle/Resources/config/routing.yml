@@ -1,3 +1,0 @@
-entreprise_user:
-    path:   /mon-entreprise
-    defaults: {_controller: AEUserBundle:User:newEntreprise}
