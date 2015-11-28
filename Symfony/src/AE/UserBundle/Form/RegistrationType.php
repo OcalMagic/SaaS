@@ -13,6 +13,8 @@ class RegistrationType extends AbstractType {
         $builder
             ->add('nom', 'text')
             ->add('prenom', 'text')
+            ->add('siretId', 'number')
+            ->add('nafId', 'text')
         ;
     }
 
