@@ -1,14 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Entreprise</title>
-</head>
-<body>
+{% extends "AEplatformBundle::layout_dashboard.php.twig" %}
+{% form_theme form '::Form/field.php.twig' %}
+
+{% block title %}
+Entreprise
+{% endblock %}
+
+{% block aeplatform_header %}
+    <header class="intro-header" style="background-image: url({{asset('img/logo_fond_marron_grand.jpg')}})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Mon Entreprise</h1>
+                        <hr class="small">
+                        <!--span class="subheading">Have questions? I have answers (maybe).</span-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block aeplatform_body %}
 
 {{ form_start(form) }}
 {{ form_widget(form) }}
 {{ form_end(form) }}
 
-</body>
-</html>
+{% endblock %}
